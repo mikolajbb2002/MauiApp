@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeerOrder.MainPage">
+
+    <StackLayout BackgroundColor="Orange" Padding="10">
+        
+       
+        <Label Text="Wybierz piwo" FontSize="Medium" />
+        <ListView x:Name="beerListView" SelectionMode="Single">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String >Piwo Jasne</x:String>
+                    <x:String>Piwo Ciemne</x:String>
+                    <x:String>Piwo Pszeniczne</x:String>
+                    <x:String>Piwo Bezalkoholowe</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label TextColor="SaddleBrown" Text="Ilość:" FontSize="Medium" Margin="0,20,0,0" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button BackgroundColor="SaddleBrown" TextColor="Goldenrod" FontSize="20"  Text="-" Clicked="OnDecreaseQuantityButtonClicked"/>
+            <Label x:Name="quantityLabel" Text="1" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center" Padding="5"/>
+            <Button BackgroundColor="SaddleBrown" TextColor="Goldenrod" FontSize="20"  Text="+" Clicked="OnIncreaseQuantityButtonClicked"/>
+        </StackLayout>
+        <Label Text="A może cos do piwka?" FontSize="Medium" />
+        <ListView x:Name="snackListView" SelectionMode="Single">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String >Paluszki</x:String>
+                    <x:String>Krakersy</x:String>
+                    <x:String>Orzeszki ziemne </x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label TextColor="SaddleBrown" Text="Ilość:" FontSize="Medium" Margin="0,20,0,0" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button BackgroundColor="SaddleBrown" TextColor="Goldenrod" FontSize="20"  Text="-" Clicked="OnDecreaseQuantityButtonClicked"/>
+            <Label x:Name="quantityLabel1" Text="1" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center" Padding="5"/>
+            <Button BackgroundColor="SaddleBrown" TextColor="Goldenrod" FontSize="20"  Text="+" Clicked="OnIncreaseQuantityButtonClicked"/>
+        </StackLayout>
+        <Button BackgroundColor="SaddleBrown" TextColor="Goldenrod"  Text="Dodaj do koszyka" Clicked="OnAddToCartButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button BackgroundColor="SaddleBrown" TextColor="Goldenrod"  Text="Przejdź do koszyka" Clicked="OnGoToCartButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        
+        <Label x:Name="statusLabel" FontSize="Medium" TextColor="Green" Margin="0,20,0,0"/>
+    </StackLayout>
+</ContentPage>
+
