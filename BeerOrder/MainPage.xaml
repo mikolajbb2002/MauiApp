@@ -14,6 +14,9 @@
                     <x:String>Piwo Ciemne</x:String>
                     <x:String>Piwo Pszeniczne</x:String>
                     <x:String>Piwo Bezalkoholowe</x:String>
+                    <x:String>Piwo Bezalkoholowe</x:String>
+                    <x:String>Piwo Bezalkoholowe</x:String>
+                    <x:String>Piwo Bezalkoholowe</x:String>
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>

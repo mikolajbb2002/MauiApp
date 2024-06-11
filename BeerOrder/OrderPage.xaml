@@ -5,11 +5,12 @@
 
     <StackLayout Padding="10">
         <Label Text="Dane do wysyłki" FontSize="Large" HorizontalOptions="Center" />
-        
+        <Entry x:Name="nameEntry" Placeholder="Imie" />
+        <Entry x:Name="surnameEntry" Placeholder="Nazwisko" />
         <Entry x:Name="streetEntry" Placeholder="Ulica" />
         <Entry x:Name="cityEntry" Placeholder="Miejscowość" />
         <Entry x:Name="postalCodeEntry" Placeholder="Kod pocztowy" />
-        <Entry x:Name="phoneEntry" Placeholder="Nr telefonu" Keyboard="Telephone" />
+        <Entry x:Name="phoneEntry"  Placeholder="Nr telefonu" Keyboard="Telephone" />
 
         <Button Text="Złóż zamówienie" Clicked="OnSubmitOrderButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
         
